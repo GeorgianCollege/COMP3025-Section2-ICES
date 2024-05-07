@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ICE1</string>
+    <string name="hello_string">Hello, World!</string>
+    <string name="good_bye_string">Good Bye!</string>
 </resources>
