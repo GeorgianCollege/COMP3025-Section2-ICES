@@ -24,6 +24,6 @@ class MainActivity : AppCompatActivity()
         }
 
         val helloWorldString = findViewById<TextView>(R.id.helloWorldTextView)
-        helloWorldString.text = getString(R.string.good_bye_world)
+        helloWorldString.text = getString(R.string.hello_tom)
     }
 }
