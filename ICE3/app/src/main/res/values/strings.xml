@@ -9,4 +9,8 @@
     <string name="not_clicked">Not Clicked!</string>
     <string name="clicked">Clicked!</string>
     <string name="something_else">Something else</string>
+    <string name="house">\uf015</string>
+    <string name="divide">\uf529</string>
+    <string name="plus">\u002b</string>
+    <string name="plus_minus">\ue43c</string>
 </resources>
