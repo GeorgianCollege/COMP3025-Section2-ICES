@@ -1,16 +1,11 @@
 <resources>
     <string name="app_name">ICE3</string>
-    <string name="hello_world_string">Hello, World!</string>
-    <string name="good_bye_world">Good Bye, World!</string>
-    <string name="hello_tom">Hello, Tom!</string>
-    <string name="click_me_button_text">Click Me!</string>
-    <string name="good_bye_tom">Good Bye, Tom</string>
-    <string name="and_me">And Me!</string>
-    <string name="not_clicked">Not Clicked!</string>
-    <string name="clicked">Clicked!</string>
-    <string name="something_else">Something else</string>
-    <string name="house">\uf015</string>
     <string name="divide">\uf529</string>
     <string name="plus">\u002b</string>
     <string name="plus_minus">\ue43c</string>
+    <string name="minus">\uf068</string>
+    <string name="multiply">\uf00d</string>
+    <string name="delete">\uf55a</string>
+    <string name="percent">\u0025</string>
+    <string name="equals">\u003d</string>
 </resources>

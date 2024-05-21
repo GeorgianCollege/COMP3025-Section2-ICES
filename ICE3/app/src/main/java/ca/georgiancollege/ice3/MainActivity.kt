@@ -31,37 +31,7 @@ class MainActivity : AppCompatActivity()
             insets
         }
 
-        binding.helloWorldTextView.text = getString(R.string.hello_tom)
-
-        binding.clickMeButton.setOnClickListener{
-            sharedButtonHandler(it as Button)
-        }
-
-        binding.anotherButton.setOnClickListener{
-            sharedButtonHandler(it as Button)
-        }
     }
 
-
-    private fun sharedButtonHandler(button: Button) = when(button)
-    {
-        binding.anotherButton -> {
-            binding.helloWorldTextView.text = getString(R.string.something_else)
-        }
-        binding.clickMeButton -> {
-            // toggle
-            binding.helloWorldTextView.text =
-                if (binding.helloWorldTextView.text == "Clicked!")
-                {
-                    getString(R.string.not_clicked)
-                }
-                else
-                {
-                    getString(R.string.clicked)
-                }
-        }
-
-        else -> {}
-    }
 
 }
