@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ICE3</string>
+    <string name="hello_world_string">Hello, World!</string>
+    <string name="good_bye_world">Good Bye, World!</string>
+    <string name="hello_tom">Hello, Tom!</string>
+    <string name="click_me_button_text">Click Me!</string>
+    <string name="good_bye_tom">Good Bye, Tom</string>
+    <string name="and_me">And Me!</string>
+</resources>
