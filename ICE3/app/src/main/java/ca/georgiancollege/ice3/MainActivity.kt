@@ -3,6 +3,7 @@ package ca.georgiancollege.ice3
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -30,30 +31,37 @@ class MainActivity : AppCompatActivity()
             insets
         }
 
-        val helloWorldString = binding.helloWorldTextView
-        helloWorldString.text = getString(R.string.hello_tom)
+        binding.helloWorldTextView.text = getString(R.string.hello_tom)
 
-        val clickMeButton = binding.clickMeButton
-
-        clickMeButton.setOnClickListener{
-            Log.i("onCreate", "Click Me Button clicked!")
-
-            binding.helloWorldTextView.text = getString(R.string.good_bye_tom)
+        binding.clickMeButton.setOnClickListener{
+            sharedButtonHandler(it as Button)
         }
 
-        val anotherButton = binding.anotherButton
-
-        anotherButton.setOnClickListener{
-            Log.i("onCreate", "another Button Clicked")
-
-            binding.helloWorldTextView.text = getString(R.string.hello_tom)
+        binding.anotherButton.setOnClickListener{
+            sharedButtonHandler(it as Button)
         }
     }
 
 
-    fun sharedButtonHandler(view: View)
+    private fun sharedButtonHandler(button: Button) = when(button)
     {
+        binding.anotherButton -> {
+            binding.helloWorldTextView.text = getString(R.string.something_else)
+        }
+        binding.clickMeButton -> {
+            // toggle
+            binding.helloWorldTextView.text =
+                if (binding.helloWorldTextView.text == "Clicked!")
+                {
+                    getString(R.string.not_clicked)
+                }
+                else
+                {
+                    getString(R.string.clicked)
+                }
+        }
 
+        else -> {}
     }
 
 }
