@@ -6,4 +6,5 @@
     <dimen name="p_x">0dp</dimen>
     <dimen name="m_y">10dp</dimen>
     <dimen name="m_x">10dp</dimen>
+    <dimen name="result_text_size">60sp</dimen>
 </resources>
