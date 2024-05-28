@@ -1,6 +1,7 @@
 package ca.georgiancollege.ice4
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -42,5 +43,19 @@ class MainActivity : AppCompatActivity()
             binding.percentButton, binding.clearButton
         )
 
+        operandButtons.forEach { it.setOnClickListener{operandHandler(it.tag as String)} }
+
+        operatorButtons.forEach { it.setOnClickListener{operatorHandler(it.tag as String)} }
+
+    }
+
+    private fun operandHandler(tag: String)
+    {
+        binding.resultTextView.text = tag
+    }
+
+    private fun operatorHandler(tag: String)
+    {
+        binding.resultTextView.text = tag
     }
 }

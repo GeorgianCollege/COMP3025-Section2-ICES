@@ -78,6 +78,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="percent"
             android:text="@string/percent"
             android:textColor="@color/black"
             android:textSize="@dimen/button_text_size" />
@@ -95,6 +96,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="delete"
             android:text="@string/delete"
             android:textColor="@color/black"
             android:textSize="@dimen/button_text_size" />
@@ -112,6 +114,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="divide"
             android:text="@string/divide"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -141,6 +144,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="7"
             android:text="7"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -158,6 +162,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="8"
             android:text="8"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -175,6 +180,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="9"
             android:text="9"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -192,6 +198,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="multiply"
             android:text="@string/multiply"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -221,6 +228,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="4"
             android:text="4"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -238,6 +246,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="5"
             android:text="5"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -255,6 +264,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="6"
             android:text="6"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -272,6 +282,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="minus"
             android:text="@string/minus"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -301,6 +312,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="1"
             android:text="1"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -318,6 +330,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="2"
             android:text="2"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -335,6 +348,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="3"
             android:text="3"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -352,6 +366,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="plus"
             android:text="@string/plus"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -381,6 +396,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="plus_minus"
             android:text="@string/plus_minus"
             android:textColor="@color/black"
             android:textSize="@dimen/button_text_size" />
@@ -398,6 +414,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="0"
             android:text="0"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -415,6 +432,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="."
             android:text="."
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
@@ -432,6 +450,7 @@
             android:paddingTop="@dimen/p_y"
             android:paddingEnd="@dimen/p_x"
             android:paddingBottom="@dimen/p_y"
+            android:tag="equals"
             android:text="@string/equals"
             android:textColor="@color/white"
             android:textSize="@dimen/button_text_size" />
