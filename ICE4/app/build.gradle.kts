@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "ca.georgiancollege.ice3"
+    namespace = "ca.georgiancollege.ice4"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "ca.georgiancollege.ice3"
+        applicationId = "ca.georgiancollege.ice4"
         minSdk = 21
         targetSdk = 34
         versionCode = 1

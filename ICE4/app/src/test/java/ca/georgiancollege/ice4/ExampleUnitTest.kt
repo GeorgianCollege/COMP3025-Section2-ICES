@@ -1,4 +1,4 @@
-package ca.georgiancollege.ice3
+package ca.georgiancollege.ice4
 
 import org.junit.Test
 

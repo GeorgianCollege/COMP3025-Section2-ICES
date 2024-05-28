@@ -1,14 +1,11 @@
-package ca.georgiancollege.ice3
+package ca.georgiancollege.ice4
 
 import android.os.Bundle
-import android.util.Log
-import android.view.View
-import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import ca.georgiancollege.ice3.databinding.ActivityMainBinding
+import ca.georgiancollege.ice4.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity()
 {
@@ -18,11 +15,13 @@ class MainActivity : AppCompatActivity()
     {
         super.onCreate(savedInstanceState)
 
-        // create a reference to the ActivityMainBinding Class object
+        // instantiates an object of type ActivityMainBinding
         binding = ActivityMainBinding.inflate(layoutInflater)
+
 
         enableEdgeToEdge()
 
+        // sets the content view to the "super view" or main view group
         setContentView(binding.root)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -31,7 +30,7 @@ class MainActivity : AppCompatActivity()
             insets
         }
 
+
+
     }
-
-
 }

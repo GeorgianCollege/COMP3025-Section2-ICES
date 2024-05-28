@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ICE3"
+rootProject.name = "ICE4"
 include(":app")
