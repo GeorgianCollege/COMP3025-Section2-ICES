@@ -30,7 +30,17 @@ class MainActivity : AppCompatActivity()
             insets
         }
 
+        val operandButtons = arrayOf(
+            binding.oneButton, binding.twoButton, binding.threeButton, binding.fourButton,
+            binding.fiveButton, binding.sixButton, binding.sevenButton, binding.eightButton,
+            binding.nineButton, binding.zeroButton, binding.plusMinusButton, binding.decimalButton,
+            binding.deleteButton
+        )
 
+        val operatorButtons = arrayOf(
+            binding.minusButton, binding.plusButton, binding.mulitplyButton, binding.divideButton,
+            binding.percentButton, binding.clearButton
+        )
 
     }
 }
