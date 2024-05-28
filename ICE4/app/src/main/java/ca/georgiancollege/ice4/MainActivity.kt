@@ -31,6 +31,12 @@ class MainActivity : AppCompatActivity()
             insets
         }
 
+        createButtonReferences()
+
+    }
+
+    private fun createButtonReferences()
+    {
         val operandButtons = arrayOf(
             binding.oneButton, binding.twoButton, binding.threeButton, binding.fourButton,
             binding.fiveButton, binding.sixButton, binding.sevenButton, binding.eightButton,
@@ -43,10 +49,9 @@ class MainActivity : AppCompatActivity()
             binding.percentButton, binding.clearButton
         )
 
-        operandButtons.forEach { it.setOnClickListener{operandHandler(it.tag as String)} }
+        operandButtons.forEach { it.setOnClickListener { operandHandler(it.tag as String) } }
 
-        operatorButtons.forEach { it.setOnClickListener{operatorHandler(it.tag as String)} }
-
+        operatorButtons.forEach { it.setOnClickListener { operatorHandler(it.tag as String) } }
     }
 
     private fun operandHandler(tag: String)

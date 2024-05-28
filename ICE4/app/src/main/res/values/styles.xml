@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="calculator_button" parent="Widget.Material3.Button">
+        <item name="android:layout_width">@dimen/button_size</item>
+        <item name="android:layout_height">@dimen/button_size</item>
+        <item name="android:layout_marginStart">@dimen/m_x</item>
+        <item name="android:layout_marginEnd">@dimen/m_x</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:fontFamily">@font/fa_solid_900</item>
+        <item name="android:paddingStart">@dimen/p_x</item>
+        <item name="android:paddingTop">@dimen/p_y</item>
+        <item name="android:paddingEnd">@dimen/p_x</item>
+        <item name="android:paddingBottom">@dimen/p_y</item>
+        <item name="android:textSize">@dimen/button_text_size</item>
+    </style>
+
+    <style name="light_grey_button" parent="calculator_button">
+        <item name="android:backgroundTint">@color/light_grey</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

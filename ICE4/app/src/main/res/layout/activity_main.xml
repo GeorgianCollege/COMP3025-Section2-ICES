@@ -385,20 +385,9 @@
 
         <Button
             android:id="@+id/plusMinusButton"
-            android:layout_width="@dimen/button_size"
-            android:layout_height="@dimen/button_size"
-            android:layout_marginStart="@dimen/m_x"
-            android:layout_marginEnd="@dimen/m_x"
-            android:layout_weight="1"
-            android:backgroundTint="@color/light_grey"
-            android:fontFamily="@font/fa_solid_900"
-            android:paddingStart="@dimen/p_x"
-            android:paddingTop="@dimen/p_y"
-            android:paddingEnd="@dimen/p_x"
-            android:paddingBottom="@dimen/p_y"
+            style="@style/light_grey_button"
             android:tag="plus_minus"
             android:text="@string/plus_minus"
-            android:textColor="@color/black"
             android:textSize="@dimen/button_text_size" />
 
         <Button
