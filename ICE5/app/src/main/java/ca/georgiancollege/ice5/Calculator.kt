@@ -5,8 +5,10 @@ import ca.georgiancollege.ice5.databinding.ActivityMainBinding
 class Calculator(dataBinding: ActivityMainBinding)
 {
     private var binding: ActivityMainBinding = dataBinding
+    private var result: String
 
     init {
+        result = ""
         createButtonReferences()
     }
 
@@ -29,9 +31,23 @@ class Calculator(dataBinding: ActivityMainBinding)
         operatorButtons.forEach { it.setOnClickListener { operatorHandler(it.tag as String) } }
     }
 
-    private fun operandHandler(tag: String)
+    private fun operandHandler(tag: String) = when(tag)
     {
-        binding.resultTextView.text = tag
+        "." -> {}
+        "delete" -> {}
+        "plus_minus" -> {}
+        else -> {
+
+            if(binding.resultTextView.text == "0")
+            {
+                binding.resultTextView.text = tag
+            }
+            else
+            {
+                result += tag
+                binding.resultTextView.text = result
+            }
+        }
     }
 
     private fun operatorHandler(tag: String)
