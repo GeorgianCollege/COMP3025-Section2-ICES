@@ -1,5 +1,6 @@
 package ca.georgiancollege.ice5
 
+import android.util.Log
 import ca.georgiancollege.ice5.databinding.ActivityMainBinding
 
 class Calculator(dataBinding: ActivityMainBinding)
@@ -41,26 +42,37 @@ class Calculator(dataBinding: ActivityMainBinding)
 
                     binding.resultTextView.text = result
                 }
-
             }
             "delete" -> {
                 result = result.dropLast(1)
 
-                binding.resultTextView.text = if(result.isEmpty()) "0" else result
+                binding.resultTextView.text = if(result.isEmpty() || result=="-") "0" else result
             }
-            "plus_minus" -> {}
+            "plus_minus" -> {
+                if(result.startsWith("-"))
+                {
+                    result = result.substring(1)
+                }
+                else
+                {
+                    if(result.isNotEmpty())
+                    {
+                        result = "-".plus(result)
+                    }
+                }
+                binding.resultTextView.text = result
+            }
             else -> {
 
                 if(binding.resultTextView.text == "0")
                 {
                     result = tag
-                    binding.resultTextView.text = result
                 }
                 else
                 {
                     result += tag
-                    binding.resultTextView.text = result
                 }
+                binding.resultTextView.text = result
             }
         }
     }
