@@ -31,21 +31,32 @@ class Calculator(dataBinding: ActivityMainBinding)
         operatorButtons.forEach { it.setOnClickListener { operatorHandler(it.tag as String) } }
     }
 
-    private fun operandHandler(tag: String) = when(tag)
-    {
-        "." -> {}
-        "delete" -> {}
-        "plus_minus" -> {}
-        else -> {
+    private fun operandHandler(tag: String) {
+        when(tag)
+        {
+            "." -> {
+                if(!binding.resultTextView.text.contains("."))
+                {
+                    result += if(result.isEmpty()) "0." else "."
 
-            if(binding.resultTextView.text == "0")
-            {
-                binding.resultTextView.text = tag
+                    binding.resultTextView.text = result
+                }
+
             }
-            else
-            {
-                result += tag
-                binding.resultTextView.text = result
+            "delete" -> {}
+            "plus_minus" -> {}
+            else -> {
+
+                if(binding.resultTextView.text == "0")
+                {
+                    result = tag
+                    binding.resultTextView.text = result
+                }
+                else
+                {
+                    result += tag
+                    binding.resultTextView.text = result
+                }
             }
         }
     }
