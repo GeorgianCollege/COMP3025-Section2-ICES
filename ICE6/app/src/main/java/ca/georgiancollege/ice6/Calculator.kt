@@ -31,6 +31,11 @@ class Calculator(dataBinding: ActivityMainBinding)
         operatorButtons.forEach { it.setOnClickListener { operatorHandler(it.tag as String) } }
     }
 
+    /**
+     * This function gets input from the Calculator to create an operand
+     *
+     * @param {tag} [String]
+     * */
     private fun operandHandler(tag: String) {
         when(tag)
         {
@@ -76,6 +81,11 @@ class Calculator(dataBinding: ActivityMainBinding)
         }
     }
 
+    /**
+     * This function performs all the computation for the Calculator
+     *
+     * @param {tag} [String]
+     * */
     private fun operatorHandler(tag: String)
     {
         when (tag)
