@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ICE6</string>
+    <string name="plus_minus">\ue43c</string>
+    <string name="minus">\uf068</string>
+    <string name="plus">\u002b</string>
+    <string name="divide">\uf529</string>
+    <string name="multiply">\uf00d</string>
+    <string name="percent">\u0025</string>
+    <string name="delete">\uf55a</string>
+    <string name="equals">\u003d</string>
+</resources>
