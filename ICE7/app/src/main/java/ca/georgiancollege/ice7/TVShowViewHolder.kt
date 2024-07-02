@@ -8,7 +8,7 @@ class TVShowViewHolder(private val binding: TextRowItemBinding): RecyclerView.Vi
     fun bind(tvShow: TVShow)
     {
         binding.title.text = tvShow.title
+        binding.genre.text = tvShow.genre
+        binding.rating.text = tvShow.rating.toString()
     }
-
-
 }
