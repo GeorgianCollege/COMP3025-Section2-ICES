@@ -20,6 +20,15 @@
         app:layout_constraintVertical_bias="0.3">
 
 
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Name" />
+
         <TextView
             android:id="@+id/resultTextView"
             android:layout_width="match_parent"

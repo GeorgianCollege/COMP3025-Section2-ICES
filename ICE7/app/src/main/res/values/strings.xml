@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ICE7</string>
+    <string name="title_text">Title</string>
+    <string name="subtitle_text">Subtitle</string>
+</resources>

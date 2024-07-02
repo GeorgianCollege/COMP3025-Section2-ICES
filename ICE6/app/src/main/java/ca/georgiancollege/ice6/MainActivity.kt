@@ -7,6 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.widget.addTextChangedListener
+import androidx.core.widget.doOnTextChanged
 import ca.georgiancollege.ice6.databinding.ActivityMainBinding
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
@@ -45,6 +47,13 @@ class MainActivity : AppCompatActivity()
         }
 
          */
+
+        // set a listener for the resultTextView
+        binding.resultTextView.addTextChangedListener{
+            Log.i("resultTextView", "text changed")
+        }
+
+        binding.nameEditText?.setText("Hello")
     }
 
 
