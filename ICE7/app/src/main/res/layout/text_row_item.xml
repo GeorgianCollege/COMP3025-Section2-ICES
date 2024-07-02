@@ -27,6 +27,12 @@
             android:layout_marginStart="@dimen/CellMargin"
             android:text="@string/subtitle_text"
             android:textColor="@color/subTitle_blue" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider" />
     </LinearLayout>
 
 </FrameLayout>
