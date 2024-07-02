@@ -3,6 +3,7 @@ package ca.georgiancollege.ice7
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import ca.georgiancollege.ice7.databinding.ActivityDetailsBinding
 import kotlinx.coroutines.CoroutineScope
@@ -40,7 +41,7 @@ class DetailsActivity : AppCompatActivity()
         }
 
         binding.deleteButton.setOnClickListener {
-            //deleteTVShow()
+            deleteTVShow()
         }
 
         binding.cancelButton.setOnClickListener {
@@ -84,6 +85,27 @@ class DetailsActivity : AppCompatActivity()
         else
         {
             Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun deleteTVShow()
+    {
+        tvShowId?.let {id ->
+            AlertDialog.Builder(this)
+                .setTitle("Delete TV Show")
+                .setMessage("Are you sure you want to delete this TV show?")
+                .setPositiveButton("Yes") {dialog, which ->
+                    CoroutineScope(Dispatchers.Main).launch {
+                        val tvShow = dataManager.getTVShowById(id)
+                        tvShow?.let {
+                            dataManager.delete(it)
+                            Toast.makeText(this@DetailsActivity, "TV Show Deleted", Toast.LENGTH_SHORT).show()
+                            finish()
+                        }
+                    }
+                }
+                .setNegativeButton("No", null)
+                .show()
         }
     }
 }

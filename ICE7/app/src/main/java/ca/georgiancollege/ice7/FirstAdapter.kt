@@ -26,7 +26,7 @@ class FirstAdapter(private val dataSet: Array<TVShow>) :
     {
         // Use view binding to set the text
         viewHolder.binding.title.text = dataSet[position].title
-        viewHolder.binding.subTitle.text = dataSet[position].genre
+        viewHolder.binding.genre.text = dataSet[position].genre
     }
 
     // Returns the size of the data set
