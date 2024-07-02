@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        /*
         // create an array of TV shows (mock data)
         val favouriteTVShows = arrayOf(
             TVShow("House of the Dragon", "HBO"),
@@ -30,6 +31,8 @@ class MainActivity : AppCompatActivity()
             layoutManager = LinearLayoutManager(context)
             adapter = firstAdapter
         }
+
+         */
 
     }
 }
