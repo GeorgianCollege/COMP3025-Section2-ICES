@@ -7,4 +7,5 @@
     <string name="enter_tv_show_title">Enter TV Show Title</string>
     <string name="enter_tv_show_genre">Enter TV Show Genre</string>
     <string name="enter_tv_show_rating">Enter TV Show Rating</string>
+    <string name="add_tv_show">Add TV Show</string>
 </resources>
