@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "522329817393",
+    "project_id": "comp3025-m2024-section2-ice8",
+    "storage_bucket": "comp3025-m2024-section2-ice8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:522329817393:android:f9ce179c318d8eeb2bf010",
+        "android_client_info": {
+          "package_name": "ca.georgiancollege.section2_ice8"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2U3XrVhiPUZh502s1a8Sv96SXurKGUEM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
