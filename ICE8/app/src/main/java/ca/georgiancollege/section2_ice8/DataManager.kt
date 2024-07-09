@@ -1,13 +1,19 @@
 package ca.georgiancollege.section2_ice8
 
 import android.content.Context
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import android.util.Log
+import kotlinx.coroutines.tasks.await
 
-class DataManager private constructor(private val database: AppDatabase)
+class DataManager private constructor()
 {
+    private val db: FirebaseFirestore = Firebase.firestore
 
     companion object
     {
-        private lateinit var database: AppDatabase
+        private val TAG = "DataManager"
 
         @Volatile
         private var m_instance: DataManager? = null
@@ -18,8 +24,7 @@ class DataManager private constructor(private val database: AppDatabase)
             {
                 synchronized(this) {
                     if(m_instance == null) {
-                        m_instance = DataManager(AppDatabase.getDatabase(context))
-                        database = m_instance!!.database
+                        m_instance = DataManager()
                     }
                 }
             }
@@ -27,13 +32,56 @@ class DataManager private constructor(private val database: AppDatabase)
         }
     }
 
-    suspend fun insert(tvShow: TVShow) = Companion.database.tvShowDao().insert(tvShow)
+    // insert a TVShow into the database
+    suspend fun insert(tvShow: TVShow) {
+        try {
+            db.collection("tvShows").document(tvShow.id).set(tvShow).await()
+        }
+        catch (e: Exception) {
+            Log.e(TAG, "Error inserting TVShow: ${e.message}", e)
+        }
+    }
 
-    suspend fun update(tvShow: TVShow) = Companion.database.tvShowDao().update(tvShow)
+    // update a TVShow in the database
+    suspend fun update(tvShow: TVShow) {
+        try {
+            db.collection("tvShows").document(tvShow.id).set(tvShow).await()
+        }
+        catch (e: Exception) {
+            Log.e(TAG, "Error updating TVShow: ${e.message}", e)
+        }
+    }
 
-    suspend fun delete(tvShow: TVShow) = Companion.database.tvShowDao().delete(tvShow)
+    // delete a TVShow from the database
+    suspend fun delete(tvShow: TVShow) {
+        try {
+            db.collection("tvShows").document(tvShow.id).delete().await()
+        }
+        catch (e: Exception) {
+            Log.e(TAG, "Error deleting TVShow: ${e.message}", e)
+        }
+    }
 
-    suspend fun getAllTVShows() = Companion.database.tvShowDao().getAllTVShows()
+    // get all TVShows from the database
+    suspend fun getAllTVShows(): List<TVShow> {
+        return try {
+            val result = db.collection("tvShows").get().await()
+            result?.toObjects(TVShow::class.java) ?: emptyList()
+        } catch (e: Exception) {
+            Log.e(TAG, "Error getting all TVShows: ${e.message}", e)
+            emptyList()
+        }
+    }
 
-    suspend fun getTVShowById(id: Int) = Companion.database.tvShowDao().getTVShowById(id)
+    // get a TVShow by ID from the database
+    suspend fun getTVShowById(id: String) : TVShow? {
+        return try {
+            val result = db.collection("tvShows").document(id).get().await()
+            result?.toObject(TVShow::class.java)
+        }
+        catch (e: Exception) {
+            Log.e(TAG, "Error getting TVShow by ID: ${e.message}", e)
+            null
+        }
+    }
 }
