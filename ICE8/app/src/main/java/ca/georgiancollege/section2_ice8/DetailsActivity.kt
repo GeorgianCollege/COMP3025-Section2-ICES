@@ -1,11 +1,11 @@
-package ca.georgiancollege.ice7
+package ca.georgiancollege.section2_ice8
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import ca.georgiancollege.ice7.databinding.ActivityDetailsBinding
+import ca.georgiancollege.section2_ice8.databinding.ActivityDetailsBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
