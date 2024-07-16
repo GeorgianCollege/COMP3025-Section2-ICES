@@ -83,4 +83,29 @@ class DataManager private constructor()
             null
         }
     }
+
+    // User CRUD Operations
+    // insert a User into the database
+    suspend fun insertUser(user: User) {
+        try {
+            db.collection("users").document(user.id).set(user).await()
+        }
+        catch (e: Exception) {
+            Log.e(TAG, "Error inserting User: ${e.message}", e)
+        }
+    }
+
+    // get a User by ID from the database
+    suspend fun getUserById(id: String) : User? {
+        return try {
+            val result = db.collection("users").document(id).get().await()
+            result?.toObject(User::class.java)
+        }
+        catch (e: Exception) {
+            Log.e(TAG, "Error getting User by ID: ${e.message}", e)
+            null
+        }
+    }
+
+
 }
