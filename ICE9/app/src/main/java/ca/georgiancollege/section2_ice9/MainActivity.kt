@@ -6,13 +6,14 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import ca.georgiancollege.section2_ice9.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 
 class MainActivity : AppCompatActivity()
 {
     private lateinit var binding: ActivityMainBinding
     private val viewModel: TVShowViewModel by viewModels()
-
+    private lateinit var auth: FirebaseAuth
     private lateinit var dataManager: DataManager
 
     // Adapter for the RecyclerView, with a click listener to open the DetailsActivity
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Initialize Firebase Auth
+        auth = FirebaseAuth.getInstance()
         // Initialize Firestore and DataManager
         FirebaseFirestore.setLoggingEnabled(true)
         dataManager = DataManager.instance()
@@ -43,10 +46,15 @@ class MainActivity : AppCompatActivity()
         // Load all TV Shows from the database when the app starts
         viewModel.loadAllTVShows()
 
-        // TODO: replace the addButton with a FAB
         binding.tvFAB.setOnClickListener {
             val intent = Intent(this, DetailsActivity::class.java)
             startActivity(intent)
+        }
+
+        binding.logoutButton.setOnClickListener {
+            auth.signOut()
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
         }
     }
 
