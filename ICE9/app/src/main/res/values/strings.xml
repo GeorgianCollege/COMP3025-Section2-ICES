@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ICE9</string>
+    <string name="title_text">Title</string>
+    <string name="subtitle_text">Subtitle</string>
+    <string name="genre">Genre</string>
+    <string name="rating">Rating</string>
+    <string name="enter_tv_show_title">Enter TV Show Title</string>
+    <string name="enter_tv_show_genre">Enter TV Show Genre</string>
+    <string name="enter_tv_show_rating">Enter TV Show Rating</string>
+    <string name="add_tv_show">Add TV Show</string>
+</resources>
