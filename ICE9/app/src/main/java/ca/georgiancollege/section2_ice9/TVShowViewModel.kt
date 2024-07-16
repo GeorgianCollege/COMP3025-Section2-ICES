@@ -16,6 +16,10 @@ class TVShowViewModel : ViewModel()
     private val m_tvShow = MutableLiveData<TVShow?>()
     val tvShow: LiveData<TVShow?> get() = m_tvShow
 
+    // LiveData to hold the selected User
+    private val m_user = MutableLiveData<User?>()
+    val user: LiveData<User?> get() = m_user
+
     // Function to load all TVShows from the DataManager
     fun loadAllTVShows() {
         viewModelScope.launch {
@@ -47,6 +51,21 @@ class TVShowViewModel : ViewModel()
         viewModelScope.launch {
             dataManager.delete(tvShow)
             loadAllTVShows()
+        }
+    }
+
+    // User CRUD Operations
+    // Function to save or update a User in the DataManager
+    fun insertUser(user: User) {
+        viewModelScope.launch {
+            dataManager.insertUser(user)
+        }
+    }
+
+    // Function to load a User by ID from the DataManager
+    fun loadUserById(id: String) {
+        viewModelScope.launch {
+            m_user.value = dataManager.getUserById(id)
         }
     }
 }
