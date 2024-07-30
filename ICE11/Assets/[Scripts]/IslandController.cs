@@ -4,9 +4,9 @@ public class IslandController : MonoBehaviour
 {
     public float maxVertical;
     public float minVertical;
-    public float minHorizontal;
     public float maxHorizontal;
-    public float horizontalSpeed;
+    public float minHorizontal;
+    public float verticalSpeed;
     void Start()
     {
         ResetGameObject();
@@ -26,7 +26,7 @@ public class IslandController : MonoBehaviour
 
     void Move()
     {
-        transform.position += new Vector3(0.0f, -horizontalSpeed * Time.deltaTime, 0.0f);
+        transform.position += new Vector3(0.0f, -verticalSpeed * Time.deltaTime, 0.0f);
     }
 
     void CheckBounds()
