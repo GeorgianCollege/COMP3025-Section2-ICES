@@ -7,6 +7,9 @@ public class PlayerBehaviour : MonoBehaviour
     public float horizontalSpeed;
     public float verticalPosition;
 
+    public AudioSource yaySound;
+    public AudioSource thunderSound;
+
     void Start()
     {
         transform.position = new Vector3(0.0f, verticalPosition, 0.0f);
