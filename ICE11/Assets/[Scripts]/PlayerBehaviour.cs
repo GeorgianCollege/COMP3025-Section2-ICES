@@ -48,4 +48,16 @@ public class PlayerBehaviour : MonoBehaviour
             transform.position = new Vector3(max, verticalPosition, 0.0f);
         }
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Island"))
+        {
+            yaySound.Play();
+        }
+        else if (other.gameObject.CompareTag("Cloud"))
+        {
+            thunderSound.Play();
+        }
+    }
 }
