@@ -139,8 +139,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minVertical: -5.63
-  maxHorizontal: 1.6
-  minHorizontal: -1.6
+  horizontalBoundary:
+    min: -1.6
+    max: 1.6
   maxOffscreenVertical: 7.63
   minOffscreenVertical: 5.63
   minVerticalSpeed: 5
