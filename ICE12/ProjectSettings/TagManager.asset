@@ -56,5 +56,8 @@ TagManager:
   - name: Cloud
     uniqueID: 3471187405
     locked: 0
+  - name: UI
+    uniqueID: 3930906605
+    locked: 0
   m_RenderingLayers:
   - Default
