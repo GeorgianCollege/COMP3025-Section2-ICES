@@ -175,9 +175,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Restart
-
-'
+  m_text: START
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f612780f9c20c9d40a45b06bbbffa0a5, type: 2}
   m_sharedMaterial: {fileID: -2266052922540726570, guid: f612780f9c20c9d40a45b06bbbffa0a5, type: 2}
@@ -615,7 +613,7 @@ GameObject:
   - component: {fileID: 1595026972}
   - component: {fileID: 1595026971}
   m_Layer: 5
-  m_Name: GameOverLabel
+  m_Name: WelcomeLabel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -660,7 +658,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GAME OVER
+  m_text: MAIL PILOT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f612780f9c20c9d40a45b06bbbffa0a5, type: 2}
   m_sharedMaterial: {fileID: -2266052922540726570, guid: f612780f9c20c9d40a45b06bbbffa0a5, type: 2}
